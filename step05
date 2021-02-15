@@ -1,0 +1,78 @@
+Create service
+
+Create CustomerService interface in com.service package
+package com.service;
+
+import java.util.List;
+
+import com.entity.Customer;
+
+public interface CustomerService {
+
+	public List<Customer> getCustomers();
+
+	public void saveCustomer(Customer theCustomer);
+
+	public Customer getCustomer(int theId);
+
+	public void deleteCustomer(int theId);
+	
+}
+
+
+Create CustomerServiceImpl classin com.service package which will implement service interface
+CustomerServiceImpl.java
+package com.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.dao.CustomerDAO;
+import com.entity.Customer;
+
+@Service
+
+public class CustomerServiceImpl implements CustomerService {
+
+	// need to inject customer dao
+	@Autowired
+	@Qualifier("custDao")
+	private CustomerDAO customerDAO;
+	
+	@Override
+	
+	public List<Customer> getCustomers() {
+		return customerDAO.getCustomers();
+	}
+
+	@Override
+	
+	public void saveCustomer(Customer theCustomer) {
+
+		customerDAO.saveCustomer(theCustomer);
+	}
+
+	@Override
+
+	public Customer getCustomer(int theId) {
+		
+		return customerDAO.getCustomer(theId);
+	}
+
+	@Override
+
+	public void deleteCustomer(int theId) {
+		
+		customerDAO.deleteCustomer(theId);
+	}
+}
+
+
+
+
+
+
