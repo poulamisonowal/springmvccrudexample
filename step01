@@ -1,0 +1,147 @@
+1)Create a table in database
+CREATE TABLE `java`.`customer` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(45) NULL,
+  `last_name` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+Make sure ur id column in the database table is autoincrement.
+
+2) Create maven-webaapp 
+
+3) Add the following in your pom.xml
+
+ <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
+    <scope>provided</scope>
+</dependency> 
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>5.3.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>5.3.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>5.3.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>5.3.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-web</artifactId>
+    <version>5.3.3</version>
+</dependency>
+
+    <dependency>
+              <groupId>org.springframework</groupId>
+              <artifactId>spring-tx</artifactId>
+              <version>5.3.3</version>
+           </dependency>
+<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+
+<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.19</version>
+</dependency>
+<dependency>
+
+
+
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.28.Final</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-entitymanager</artifactId>
+    <version>5.4.28.Final</version>
+</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+    <version>5.2.12.RELEASE</version>
+</dependency>
+	<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+<dependency>
+    <groupId>org.hibernate.validator</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.1.6.Final</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/javax.activation/javax.activation-api -->
+
+
+  <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+
+<dependency>
+
+4)Create web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+id="WebApp_ID" version="3.0">
+<servlet>
+<servlet-name>CRUDEX</servlet-name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>    
+    <load-on-startup>1</load-on-startup>      
+</servlet>    
+<servlet-mapping>    
+    <servlet-name>CRUDEX</servlet-name>    
+    <url-pattern>/</url-pattern>    
+</servlet-mapping>    
+
+</web-app>
+
+
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-c3p0</artifactId>
+    <version>5.4.21.Final</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/javax.transaction/jta -->
+    
+    
